@@ -1,0 +1,535 @@
+/* General */
+
+:root {
+    --discordbackground: #1e1f22;
+    --discordmiddleground: #2b2d31;
+    --discordforeground: #323338;
+    --discordpersonal: #232428;
+    --discordtext: #80848e;
+}
+
+/* Discord Page */
+
+.discordoverall {
+    margin: 0px;
+    background-color: var(--discordforeground);
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Top Bar */
+
+.discordwindowbar {
+    background-color: var(--discordbackground);
+    height: 22px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.discordwindowbarright {
+    width: 100%;
+    height: 22px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#discordtextimage {
+    padding-left: 15px;
+}
+
+.discordwindowbarclosebutton {
+    height: 22px;
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discordwindowbarbuttons {
+    height: 22px;
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discordwindowbarclosebutton:hover {
+    background-color: var(--hover);
+}
+
+.discordwindowbarbuttons:hover {
+    background-color: var(--hover);
+}
+
+#closebuttonlink {
+    max-width: 28px;
+    min-width: 28px;
+}
+
+/* Main Discord */
+
+.discordmain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Main Sidebar */
+
+.discordsidebar {
+    width: 75px;
+    height: 100%;
+    background-color: var(--discordbackground);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.discordsidebaricons {
+    width: 50px;
+    height: 50px;
+    background-color: var(--discordforeground);
+    border-radius: 25px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discordsidebaricons:hover {
+    transition: 0.3s;
+    border-radius: 10px
+}
+
+.discordsidebargap {
+    opacity: 0;
+    font-size: 1px;
+    height: 10px;
+    width: 50px;
+}
+
+.discordsidebargapsmall {
+    opacity: 0;
+    font-size: 1px;
+    height: 10px;
+    width: 50px;
+}
+
+.discordsidebargapline {
+    opacity: 1;
+    font-size: 1px;
+    height: 2px;
+    width: 32px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Discord Excluding Main Sidebar */
+
+.discordmain2 {
+    background-color: var(--discordbackground);
+    width: 100%;
+    height: 100%;
+}
+
+.discordmain3 {
+    background-color: var(--discordforeground);
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Side Bar 2 */
+
+.discordsidebar2 {
+    background-color: var(--discordmiddleground);
+    width: 240px;
+    height: 100%;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Search Bar */
+
+.discordsearchbarcontainer {
+    width: 240px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.discordsearchbar {
+    font-family: 'gg sans Normal Regular';
+    color: var(--discordtext);
+    background-color: var(--discordbackground);
+    font-size: 14px;
+    border-radius: 3px;
+    width: 215px;
+    height: 26px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5px;
+}
+
+/*  Divider */
+
+.discordmainblackdivider {
+    width: 240px;
+    height: 1px;
+    opacity: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Scroll Section */
+
+.discordscrollsection {
+    width: 240px;
+    height: 79%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'gg sans Normal Regular';
+    color: white;
+}
+
+/* Personal Section */
+
+.discordpersonalsection {
+    background-color: var(--discordpersonal);
+    width: 240px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'gg sans Normal Regular';
+    color: white;
+}
+
+/* Main Section */
+
+.discordmain4 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'gg sans Normal Regular';
+    color: white;
+}
+
+/* Navbar */
+
+.discordnavbar {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'gg sans SemiBold Regular';
+    color: white;
+    font-size: 16px;
+    cursor: default;
+}
+
+.discordnavbarfriends {
+    padding-left: 5px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discordnavbaricon {
+    padding-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discordnavbaronline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    height: 22px;
+    width: 60px;
+}
+
+.discordnavbarall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 40px;
+    border-radius: 3px;
+    color: #80848e;
+    font-family: 'gg sans Medium Regular';
+}
+
+.discordnavbarall:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #dbded7;
+}
+
+.discordnavbarpending {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 70px;
+    border-radius: 3px;
+    color: #80848e;
+    font-family: 'gg sans Medium Regular';
+}
+
+.discordnavbarpending:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #dbded7;
+}
+
+.discordnavbaraddfriend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 92px;
+    background-color: #248045;
+    border-radius: 3px;
+    font-family: 'gg sans Medium Regular';
+}
+
+.discordnavbaritem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 60px;
+}
+
+.discordnavbardivider {
+    width: 1px;
+    height: 22px;
+    opacity: 0.1;
+    padding-right: 16px;
+}
+
+.discordnavbarblank {
+    width: 16px;
+    opacity: 0;
+    height: 22px;
+}
+
+.discordnavbarright {
+    display: flex;
+    width: 73%;
+    height: 22px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.discordnavbaritemright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 42px;
+}
+
+.svgicons:hover {
+    fill: #dbdee1;
+}
+
+.discordnavbarblank2 {
+    width: 5px;
+    opacity: 0;
+    height: 22px;
+}
+
+/*  Divider */
+
+.discordmainblackdivider2 {
+    width: 100%;
+    height: 1px;
+    opacity: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Section */
+
+.discordmain5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 95%;
+}
+
+.discordmainsection {
+    height: 100%;
+    width: 74%;
+}
+
+/* Search Bar */
+
+.discordmainsearchbarcontainer {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.discordmainsearchbar {
+    font-family: 'gg sans Normal Regular';
+    color: var(--discordtext);
+    background-color: var(--discordbackground);
+    font-size: 16px;
+    border-radius: 5px;
+    width: 95%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.discordmainonline {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.discordmainonlinetext {
+    height: 30px;
+    width: 96.5%;
+    color: #80848e;
+    font-family: 'gg sans Bold';
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.discordmainonlinedivider {
+    height: 1px;
+    width: 96.5%;
+    font-size: 1px;
+    color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.discordmainonlinefriend {
+    height: 60px;
+    width: 98%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Active Section */
+
+.discordactivesection {
+    height: 100%;
+    width: 25.9%;
+}
+
+.discordactiveheading {
+    width: 90%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'gg sans Bold';
+    color: white;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.discordactivesubheading {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'gg sans SemiBold Regular';
+    color: white;
+}
+
+.discordactivecontentcontainer {
+    width: 100%;
+    height: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.discordactivecontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    font-family: 'gg sans Medium Regular';
+    color: #b5bac1;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Divider */
+
+.discordmaindivider {
+    height: 100%;
+    width: 1px;
+    background-color: white;
+    opacity: 0.1;
+    font-size: 1px;
+    font-display: none;
+}

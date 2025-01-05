@@ -1,0 +1,10 @@
+To Do:
+- Finish Discord
+- Make File Explorer
+- Make Spotify
+- Make Microsoft Store
+- Make Chrome
+- Make Opera
+- Make Windows Button Work
+- Make Hidden Icons Folder Work
+- Make Notification Center Work

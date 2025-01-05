@@ -1,5 +1,184 @@
 /* General */
 
 :root {
-    --filebackground: #ffffff;
+    --filebackground: #202020;
+    --filemiddleground: #191919;
+    --filetopbar: #000000;
+    --windowsfont: "Segoe UI";
+}
+
+/* File Explorer */
+
+.fileoverall {
+    margin: 0px;
+    background-color: var(--filebackground);
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Top Bar */
+
+.filewindowbar {
+    background-color: var(--filetopbar);
+    height: 23px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    font-family: var(--windowsfont);
+    font-size: 11px;
+    cursor: default;
+}
+
+
+.filewindowbarright {
+    width: 90%;
+    height: 23px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#filewindowbartext {
+    padding-left: 5px;
+}
+
+.filewindowbarclosebutton {
+    height: 23px;
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filewindowbarbuttons {
+    height: 23px;
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filewindowbarclosebutton:hover {
+    background-color: var(--hover);
+}
+
+.filewindowbarbuttons:hover {
+    background-color: var(--hover);
+}
+
+#closebuttonlink {
+    max-width: 28px;
+    min-width: 28px;
+}
+
+/* Navbar */
+
+.filewindowbar2 {
+    background-color: var(--filetopbar);
+    height: 23px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    font-family: var(--windowsfont);
+    font-size: 11px;
+    cursor: default;
+}
+
+#navbarfilebox {
+    background-color: #005fa8;
+    width: 56px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbarcomputerbox {
+    width: 77px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbargap {
+    max-width: 1px;
+    min-width: 1px;
+    height: 23px;
+    font-size: 1px;
+    color: rgba(0, 0, 0, 0);
+}
+
+#navbarviewbox {
+    width: 51px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbarfilebox:hover {
+    background-color: #0076d1;
+}
+
+#navbarviewbox:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #2b2b2b;
+    width: 49px;
+    height: 21px;
+}
+
+#navbarcomputerbox:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 75px;
+    height: 21px;
+    border: 1px solid #2b2b2b;
+}
+
+.navbarright {
+    width: 92%;
+    height: 23px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbarrightbox {
+    width: 23px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbarrightbox:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 21px;
+    height: 21px;
+    border: 1px solid #2b2b2b;
+}
+
+/* Main File Explorer */
+
+.filemain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }

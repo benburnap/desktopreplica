@@ -28,23 +28,30 @@ updateTime();
 
 // Windows Button Function
 
-const windowsbutton = document.getElementById('windowsbutton');
-const windowContainer = document.getElementById('windowContainer');
-const windowContent = document.querySelector('.window-content');
+var windowsbutton = document.getElementById('windowsbutton') && document.getElementById('windowsicon');
+var windowContainer = document.getElementById('windowContainer');
+var windowContent = document.querySelector('.window-content');
 
 windowsbutton.addEventListener('click', () => {
-    if (windowContainer.classList.contains('active')) {
-      windowContainer.classList.remove('active');
-       windowContainer.style.display = 'none'; //hide the window immediately
-    } else {
-         windowContainer.style.display = 'flex';
-        windowContainer.classList.add('active');
+    console.log("The Windows Button Was Clicked");
+
+    var present = window.getComputedStyle(windowContainer).display;
+    console.log(present);
+
+    if  (present === 'none') {
+      windowContainer.style.display = 'flex';
+    }
+    else {
+      windowContainer.style.display = 'none';
     }
 });
 
 window.addEventListener('click', (event) => {
-    if (windowContainer.classList.contains('active') && !windowContent.contains(event.target) && event.target !== windowsbutton) {
-         windowContainer.classList.remove('active');
-         windowContainer.style.display = 'none';
+    var present = window.getComputedStyle(windowContainer).display;
+    console.log(present);
+
+    if (present === 'flex' && !windowContent.contains(event.target) && event.target !== windowsbutton) {
+      console.log ("The Window was Clicked")
+      windowContainer.style.display = 'none';
     }
 });

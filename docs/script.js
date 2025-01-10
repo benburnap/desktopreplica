@@ -28,11 +28,12 @@ updateTime();
 
 // Windows Button Function
 
-var windowsbutton = document.getElementById('windowsbutton') && document.getElementById('windowsicon');
+var windowsbutton = document.getElementById('windowsbutton');
+var windowsimage = document.getElementById('windowsbutton') && document.getElementById('windowsicon');
 var windowContainer = document.getElementById('windowContainer');
 var windowContent = document.querySelector('.window-content');
 
-windowsbutton.addEventListener('click', () => {
+function toggleWindowContainer() {
     console.log("The Windows Button Was Clicked");
 
     var present = window.getComputedStyle(windowContainer).display;
@@ -44,6 +45,10 @@ windowsbutton.addEventListener('click', () => {
     else {
       windowContainer.style.display = 'none';
     }
+}
+
+windowsbutton.addEventListener('click', () => {
+    toggleWindowContainer();
 });
 
 window.addEventListener('click', (event) => {

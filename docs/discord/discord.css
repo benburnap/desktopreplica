@@ -30,6 +30,7 @@
 .discordwindowbar {
     background-color: var(--discordbackground);
     height: 22px;
+    min-height: 22px;
     width: 100vw;
     display: flex;
     justify-content: flex-start;
@@ -93,6 +94,7 @@
 
 .discordsidebar {
     width: 75px;
+    min-width: 75px;
     height: 100%;
     background-color: var(--discordbackground);
     display: flex;
@@ -166,6 +168,7 @@
 .discordsidebar2 {
     background-color: var(--discordmiddleground);
     width: 240px;
+    min-width: 240px;
     height: 100%;
     border-top-left-radius: 10px;
     display: flex;
@@ -179,6 +182,7 @@
 .discordsearchbarcontainer {
     width: 240px;
     height: 48px;
+    min-height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,7 +218,7 @@
 
 .discordscrollsection {
     width: 240px;
-    height: 702px;
+    height: calc(100% - 140px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -268,6 +272,10 @@
     color: #ffffff;
 }
 
+.friendssvg {
+    fill: #ffffff;
+}
+
 .friendssvg:hover {
     fill: #d6dee1;
 }
@@ -282,11 +290,75 @@
     fill: #d6dee1;
 }
 
+.discordscrollsectionitem2:active {
+    background-color: #404249;
+    color: #ffffff;
+    fill: #ffffff;
+}
+
 .discordscrollsectionitemtext {
     margin-left: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.discordscrollsectiondirectcontainer {
+    width: 100%;
+    height: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #949ba4;
+    font-family: 'gg sans SemiBold Regular';
+}
+
+.discordscrollsectiondirect {
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.discordscrollsectiondirect2 {
+    letter-spacing: 0.5px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.discordscrollsectionfriendslist  {
+    height: 100%;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'gg sans Normal Regular';
+    color: #949ba4;
+}
+
+.discordscrollsectionfriendcontainer {
+    width: 220px;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2px;
+    cursor: pointer;
+    background-color: #404249;
+    border-radius: 5px;
+}
+
+.discordscrollsectionfriendtext {
+    padding-left: 12px;
 }
 
 
@@ -316,6 +388,7 @@
     background-color: var(--discordpersonal);
     width: 240px;
     height: 140px;
+    min-height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -342,6 +415,7 @@
 .discordnavbar {
     width: 100%;
     height: 48px;
+    min-height: 48px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -375,6 +449,7 @@
     border-radius: 3px;
     height: 22px;
     width: 60px;
+    min-width: 60px;
 }
 
 .discordnavbarall {
@@ -383,6 +458,7 @@
     align-items: center;
     height: 22px;
     width: 40px;
+    min-width: 40px;
     border-radius: 3px;
     color: #80848e;
     font-family: 'gg sans Medium Regular';
@@ -400,6 +476,7 @@
     align-items: center;
     height: 22px;
     width: 70px;
+    min-width: 70px;
     border-radius: 3px;
     color: #80848e;
     font-family: 'gg sans Medium Regular';
@@ -417,6 +494,7 @@
     align-items: center;
     height: 22px;
     width: 92px;
+    min-width: 92px;
     background-color: #248045;
     border-radius: 3px;
     font-family: 'gg sans Medium Regular';
@@ -516,13 +594,19 @@
     background-color: var(--discordbackground);
     font-size: 16px;
     border-radius: 5px;
-    width: 95%;
+    width: 96.5%;
     height: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+    cursor: text;
+}
+
+.discordmainsearchbartext {
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .discordmainonline {
@@ -536,11 +620,12 @@
 .discordmainonlinetext {
     height: 30px;
     width: 96.5%;
-    color: #80848e;
+    color: #9e9fa6;
     font-family: 'gg sans Bold';
     font-size: 12px;
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .discordmainonlinedivider {
@@ -554,7 +639,6 @@
 .discordmainonlinefriend {
     height: 60px;
     width: 98%;
-    background-color: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     display: flex;
     flex-direction: row;
@@ -562,6 +646,10 @@
     align-items: center;
 }
 
+.discordmainonlinefriendtext {
+    margin-left: 15px;
+}
+    
 /* Active Section */
 
 .discordactivesection {
@@ -571,7 +659,7 @@
 
 .discordactiveheading {
     width: 90%;
-    height: 8%;
+    height: 64px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -584,7 +672,7 @@
 
 .discordactivesubheading {
     width: 100%;
-    height: 5%;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -653,4 +741,43 @@
 
 [data-title] {
     position: relative;
+}
+
+/* Nitro Page */
+
+#nitropage {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'gg sans Normal Regular';
+    color: white;
+}
+
+/* Message Request Page */
+
+#messagerequestspage {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'gg sans Normal Regular';
+    color: white;
+}
+
+/* Shop Page */
+
+#shoppage {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'gg sans Normal Regular';
+    color: white;
 }

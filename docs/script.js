@@ -37,13 +37,19 @@ function toggleWindowContainer() {
     console.log("The Windows Button Was Clicked");
 
     var present = window.getComputedStyle(windowContainer).display;
+    var transform = window.getComputedStyle(windowContent).transform;
     console.log(present);
+    console.log(transform);
 
     if  (present === 'none') {
       windowContainer.style.display = 'flex';
+      setTimeout(() => {
+      windowContent.style.transform = 'translateY(0px)'
+      }, 1);
     }
     else {
       windowContainer.style.display = 'none';
+      windowContent.style.transform = 'translateY(20px)';
     }
 }
 
@@ -55,8 +61,88 @@ window.addEventListener('click', (event) => {
     var present = window.getComputedStyle(windowContainer).display;
     console.log(present);
 
-    if (present === 'flex' && !windowContent.contains(event.target) && event.target !== windowsbutton) {
+    if (present === 'flex' && !windowContent.contains(event.target) && event.target !== windowsbutton && event.target !== notificationCentreButton && event.target !== hiddeniconsbutton) {
       console.log ("The Window was Clicked")
       windowContainer.style.display = 'none';
+      windowContent.style.transform = 'translateY(20px)';
     }
+});
+
+// Hidden Icons Button
+
+var hiddeniconsContainer = document.getElementById('hiddeniconsContainer');
+var hiddeniconsContent = document.getElementById('hiddenicons-content');
+var hiddeniconsbutton = document.getElementById('hiddenicons');
+
+function toggleHiddenIcons() {
+    console.log("The Hidden Icons Button Was Clicked");
+
+    var present = window.getComputedStyle(hiddeniconsContainer).display;
+
+    if (present === 'none') {
+      hiddeniconsContainer.style.display = 'flex';
+    }
+    else {
+      hiddeniconsContainer.style.display = 'none';
+    }
+}
+
+hiddeniconsbutton.addEventListener('click', () => {
+    toggleHiddenIcons();
+});
+
+window.addEventListener('click', (event) => {
+  var present = window.getComputedStyle(hiddeniconsContainer).display;
+  console.log(present);
+
+  if (present === 'flex' && !hiddeniconsContent.contains(event.target) && event.target !== hiddeniconsbutton) {
+    console.log ("The Window was Clicked")
+    hiddeniconsContainer.style.display = 'none';
+  }
+});
+
+// Notification Centre Button
+
+var notificationCentreContainer = document.getElementById('notificationcentreContainer');
+var notificationCentreContent = document.getElementById('notificationcentre-content');
+var notificationCentreButton = document.getElementById('notificationcentre');
+
+function toggleNotificationCentre() { 
+    console.log("The Notification Centre Button Was Clicked");
+
+    var present = window.getComputedStyle(notificationCentreContainer).display;
+
+    if (present === 'none') {
+      notificationCentreContainer.style.display = 'flex';
+      setTimeout(() => {
+        notificationCentreContent.style.transform = 'translateX(0px)'
+      }, 1);
+    }
+    else {
+      setTimeout(() => {
+        notificationCentreContent.style.transform = 'translateX(400px)'
+      }, 1);
+      setTimeout(() => {
+        notificationCentreContainer.style.display = 'none';
+      }, 200);
+    }
+}
+
+notificationCentreButton.addEventListener('click', () => {
+    toggleNotificationCentre();
+});
+
+window.addEventListener('click', (event) => {
+  var present = window.getComputedStyle(notificationCentreContainer).display;
+  console.log(present);
+
+  if (present === 'flex' && !notificationCentreContent.contains(event.target) && event.target !== notificationCentreButton) {
+    console.log ("The Window was Clicked")
+    setTimeout(() => {
+      notificationCentreContent.style.transform = 'translateX(400px)'
+    }, 1);
+    setTimeout(() => {
+      notificationCentreContainer.style.display = 'none';
+    }, 200);
+  }
 });

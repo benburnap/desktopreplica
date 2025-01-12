@@ -83,6 +83,7 @@ h1 {
     align-items: center;
     cursor: default;
     z-index: 1;
+    user-select: none;
 }
 
 .taskbarright {
@@ -167,7 +168,7 @@ h1 {
 
 /* -- Activity Centre -- */
 
-.notificationcentre {
+#notificationcentre {
     height: 40px;
     width: 40px;
     display: flex;
@@ -175,7 +176,7 @@ h1 {
     align-items: center;
 }
 
-.notificationcentre:hover {
+#notificationcentre:hover {
     transition: 0.3s;
     background-color: var(--hover);
 }
@@ -212,7 +213,7 @@ h1 {
 
 /* -- Folded Apps -- */
 
-.hiddenicons {
+#hiddenicons {
     height: 40px;
     width: 24px;
     display: flex;
@@ -220,7 +221,7 @@ h1 {
     align-items: center;
 }
 
-.hiddenicons:hover {
+#hiddenicons:hover {
     transition: 0.3s;
     background-color: var(--hover);
 }
@@ -269,26 +270,86 @@ h1 {
 #windowContainer {
     position: fixed;
     bottom: 40px;
-    left: 0;
     width: 100%;
-    height: calc(100% - 40px);
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.0);
     display: none;
     justify-content: flex-start;
     align-items: flex-end;
-    z-index: 999;
+    z-index: 0;
 }
 
 .window-content {
     background-color: #262626;
     font-family: "Segoe UI";
     color: white;
-    padding: 20px;
-    width: 610px;
-    height: 600px;
+    width: 648px;
+    height: 648px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translateY(20px);
+    transition: 0.2s ease-out;
+    box-shadow: #1d1d1d 1px -1px 8px 1px;
+}
+
+/* -- Hidden Icons Expanded -- */
+
+#hiddeniconsContainer {
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 0;
+}
+
+#hiddenicons-content {
+    background-color: rgba(38, 38, 38, 0.95);
+    font-family: "Segoe UI";
+    color: white;
+    width: 160px;
+    height: 120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 54px;
+}
+
+/* -- Notification Centre Expanded -- */
+
+#notificationcentreContainer {
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 0;
+}
+
+#notificationcentre-content {
+    background-color: rgba(38, 38, 38, 0.98);
+    font-family: "Segoe UI";
+    color: #858585;
+    width: 400px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(400px);
+    transition: 0.2s ease-in-out;
 }

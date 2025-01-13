@@ -1,8 +1,0 @@
-To Do:
-- Finish Discord
-- Make File Explorer
-- Make Spotify
-- Make Microsoft Store
-- Make Chrome
-- Make Opera
-- Make Notification Center Work

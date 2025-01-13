@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Ben Burnap - 'awesomebenskull' on Discord">
+    <meta name="description" content="A desktop simulation as a personal project">
+
+    <!-- Tab -->
+    <title>Calculator</title>
+    <link rel="Tab Icon" type="image" href="../photos/Calculator.png">
+
+    <!-- Directory -->
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <link href="calculator.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<!-- Body -->
+ <body>
+    <!-- Overall -->
+    <div class="overall">
+        <!-- Calculator -->
+        <div class="calculatoroverall">
+
+            <!-- Top Bar -->
+            <div class="calculatorwindowbar">
+                <div id="calculatorwindowbaricon"><img src="../photos/Calculator.png" height="14px" width="14px"></div>
+                <div id="calculatorwindowbartext">Calculator</div>
+                <div class="calculatorwindowbarright">
+                    <a href="../index.html"><div id="calculatorwindowminimise" title="Minimise"><img src="../photos/minimise.png" height="18px" width="14px"></div></a>
+                    <a href="../index.html"><div id="calculatorwindowmaximise" title="Maximise"><img src="../photos/maximise.png" height="12px" width="12px"></div></a>
+                    <a href="../index.html"><div id="calculatorwindowclose" title="Close"><img src="../photos/close.png" height="12px" width="12px"></div></a>
+                </div>
+            </div>
+
+            <!-- Calculator Main -->
+            <div class="calculatormain">
+
+                <!-- Calculator Left -->
+                <div class="calculatorleft">
+
+                    <!-- Heading -->
+                    <div class="heading">
+                        <div class="headingicon"><img src="../photos/menuburger.png" height="16px" width="16px"></div>
+                        <div class="headingtext">Standard</div>
+                        <div class="headingbutton">o</div>
+                    </div>
+
+                    <!-- Output -->
+                    
+                    <div class="outputcontainer">
+                        <div id="storage">0</div>
+                        <div id="output">0</div>
+                    </div>
+
+                    <!-- Memory Buttons -->
+                    <div class="memoryrow">
+                        <div class="calcmemorybuttons" id="memoryclear">MC</div>
+                        <div class="calcmemorybuttons" id="memoryadd">MR</div>
+                        <div class="calcmemorybuttons" id="memoryrecall">M+</div>
+                        <div class="calcmemorybuttons" id="memorysubtract">M-</div>
+                        <div class="calcmemorybuttons" id="memorystore">MS</div>
+                    </div>
+
+                    <!-- Main Buttons -->
+                    <div class="mainbuttons">
+                        <div class="mainbuttontype1">%</div>
+                        <div class="mainbuttontype1">CE</div>
+                        <div class="mainbuttontype1">C</div>
+                        <div class="mainbuttontype1"><img src="../photos/backspace.png" height="32px" width="32px"></div>
+                        <div class="mainbuttontype1">1/&#119909;</div>
+                        <div class="mainbuttontype1">&#119909;<sup>2</sup></div>
+                        <div class="mainbuttontype1">&Sqrt;&#119909;</div>
+                        <div class="mainbuttontype1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="64" height="64" viewbox="0 0 96 96"><rect x="0" y="0" width="64" height="64" fill="none"/><g transform="translate(29.352, 60.024)"><path d="M15.26-22.37L15.26-22.37Q15.26-23.86 16.18-24.82 17.09-25.78 18.53-25.78L18.53-25.78Q21.02-25.78 21.84-23.42L21.84-23.42Q21.98-23.04 21.98-22.37L21.98-22.37Q21.98-20.83 21.07-19.92 20.16-19.01 18.62-19.01L18.62-19.01Q16.27-19.01 15.41-21.31L15.41-21.31Q15.26-21.7 15.26-22.37ZM3.36-11.04Q2.69-11.38 2.69-12 2.69-12.62 3.36-12.96L3.36-12.96 33.89-12.96Q34.61-12.58 34.61-12 34.61-11.42 33.89-11.04L33.89-11.04 3.36-11.04ZM15.26-1.63L15.26-1.63Q15.26-3.12 16.18-4.08 17.09-5.04 18.53-5.04L18.53-5.04Q21.02-5.04 21.84-2.69L21.84-2.69Q21.98-2.3 21.98-1.63L21.98-1.63Q21.98-0.1 21.07 0.82 20.16 1.73 18.62 1.73L18.62 1.73Q16.27 1.73 15.41-0.58L15.41-0.58Q15.26-0.96 15.26-1.63Z" fill="#ffffff"/></g></svg></div>
+                        <div class="mainbuttontype2">7</div>
+                        <div class="mainbuttontype2">8</div>
+                        <div class="mainbuttontype2">9</div>
+                        <div class="mainbuttontype1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="64" height="64" viewbox="0 0 96 96"><rect x="0" y="0" width="96" height="96" fill="none"/><g transform="translate(29.352, 60)"><path d="M30.24-1.39L30.24-1.39Q30.24-1.01 29.95-0.72 29.66-0.43 29.23-0.43L29.23-0.43Q28.99-0.43 28.18-1.2 27.36-1.97 23.66-5.66L23.66-5.66 18.67-10.66 13.63-5.62Q8.54-0.62 8.4-0.53L8.4-0.53Q8.21-0.43 8.06-0.43L8.06-0.43Q7.68-0.43 7.37-0.72 7.06-1.01 7.06-1.39L7.06-1.39Q7.06-1.49 7.15-1.78L7.15-1.78Q7.3-2.06 12.24-7.01L12.24-7.01 17.23-12 12.24-16.99Q7.3-21.94 7.15-22.22L7.15-22.22Q7.06-22.42 7.06-22.56L7.06-22.56Q7.06-22.94 7.34-23.26 7.63-23.57 8.02-23.57L8.02-23.57Q8.11-23.57 8.4-23.47L8.4-23.47Q8.54-23.38 13.63-18.38L13.63-18.38 18.67-13.34 23.66-18.34Q27.36-22.03 28.18-22.8 28.99-23.57 29.23-23.57L29.23-23.57Q29.66-23.57 29.95-23.28 30.24-22.99 30.24-22.61L30.24-22.61Q30.24-22.42 30.14-22.22 30.05-22.03 25.06-17.04L25.06-17.04 20.06-12 25.06-6.96Q30.05-1.97 30.14-1.78 30.24-1.58 30.24-1.39Z" fill="#ffffff"/></g></svg></div>
+                        <div class="mainbuttontype2">4</div>
+                        <div class="mainbuttontype2">5</div>
+                        <div class="mainbuttontype2">6</div>
+                        <div class="mainbuttontype1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="64" height="64" viewbox="0 0 96 96"><rect x="0" y="0" width="96" height="96" fill="none"/><g transform="translate(29.328, 60)"><path d="M4.7-11.04Q4.03-11.38 4.03-12 4.03-12.62 4.7-12.96L4.7-12.96 32.59-12.96Q33.31-12.58 33.31-12 33.31-11.42 32.59-11.04L32.59-11.04 4.7-11.04Z" fill="#ffffff"/></g></svg></div>
+                        <div class="mainbuttontype2">1</div>
+                        <div class="mainbuttontype2">2</div>
+                        <div class="mainbuttontype2">3</div>
+                        <div class="mainbuttontype1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="64" height="64" viewbox="0 0 96 96"><rect x="0" y="0" width="96" height="96" fill="none"/><g transform="translate(29.328, 60.024)"><path d="M3.36-11.04Q2.69-11.38 2.69-12 2.69-12.62 3.36-12.96L3.36-12.96 17.71-12.96 17.71-20.16 17.76-27.36Q18.24-27.98 18.67-27.98L18.67-27.98Q19.3-27.98 19.63-27.26L19.63-27.26 19.63-12.96 33.94-12.96Q34.66-12.58 34.66-12 34.66-11.42 33.94-11.04L33.94-11.04 19.63-11.04 19.63 3.26Q19.3 3.94 18.67 3.94 18.05 3.94 17.71 3.26L17.71 3.26 17.71-11.04 3.36-11.04Z" fill="#ffffff"/></g></svg></div>
+                        <div class="mainbuttontype2">+/-</div>
+                        <div class="mainbuttontype2">0</div>
+                        <div class="mainbuttontype2">.</div>
+                        <div class="mainbuttontype3"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="64" height="64" viewbox="0 0 96 96"><rect x="0" y="0" width="96" height="96" fill="none"/><g transform="translate(29.328, 60)"><path d="M2.69-16.66L2.69-16.66Q2.69-17.28 3.36-17.62L3.36-17.62 33.94-17.62Q34.66-17.28 34.66-16.66L34.66-16.66Q34.66-16.13 33.98-15.74L33.98-15.74 18.72-15.7 3.46-15.7Q2.69-15.94 2.69-16.66ZM2.69-7.34L2.69-7.34Q2.69-8.06 3.46-8.3L3.46-8.3 33.98-8.3Q34.03-8.26 34.2-8.14 34.37-8.02 34.44-7.94 34.51-7.87 34.58-7.7 34.66-7.54 34.66-7.34L34.66-7.34Q34.66-6.72 33.94-6.38L33.94-6.38 3.36-6.38Q2.69-6.72 2.69-7.34Z" fill="#000000"/></g></svg></div>
+                    </div>
+                </div>
+
+
+                <!-- Calculator Right-->
+                <div class="calculatorright">
+                    <div class="memoryselector">
+                        <div id="historybutton">
+                            <div>History</div>
+                            <div id="historyicon"><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="30px" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 12C6 11.4477 6.44772 11 7 11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H7C6.44772 13 6 12.5523 6 12Z" fill="#0063b3"/></svg></div>
+                        </div>
+                        <div id="memorybutton">
+                            <div>Memory</div>
+                            <div id="memoryicon"><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="30px" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 12C6 11.4477 6.44772 11 7 11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H7C6.44772 13 6 12.5523 6 12Z" fill="#0063b3"/></svg></div>
+                        </div>
+                    </div>
+                    <div class="historymain">
+                        There's no history yet.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Taskbar -->
+        <div class="taskbar">
+
+            <!-- Taskbar Left -->
+            <div id="windowsbutton" title="Start"><img src="../photos/icon.png" height="22px" width="22px" id="windowsicon"></div>
+            <a href="../example.html"><div class="shortcut" title="Microsoft Store"><img src="../photos/Microsoft_Store.webp" height="24px" width="24px"></div></a>
+            <a href="discord.html"><div class="shortcut" title="Discord"><img src="../photos/discord.png" height="36px" width="36px"></div></a>
+            <a href="../example.html"><div class="shortcut" title="Spotify"><img src="../photos/Spotify.png" height="24px" width="24px"></div></a>
+            <a href="../example.html"><div class="shortcut" title="Calculator"><img src="../photos/Calculator.png" height="24px" width="24px"></div></a>
+            <a href="../fileexplorer/filexplorer.html"><div class="shortcut" title="File Explorer"><img src="../photos/folders.png" height="26px" width="26px"></div></a>
+            <a href="../example.html"><div class="shortcut" title="Google Chrome"><img src="../photos/Chrome.png" height="24px" width="24px"></div></a>
+
+            <!-- Taskbar Right -->
+            <div class="taskbarright">
+                <div class="weather" title="Weather">
+                    <div class="weatherpadding"><img src="../photos/Weather.png" height="20px" width="20px"></div>
+                    <div class="weatherpadding1">25°C Mostly Sunny</div>
+                </div>
+                <div class="homepagegap"><div class="invisibletext"><p>I</p></div></div>
+                <div id="hiddenicons" title="Show hidden icons"><img src="../photos/arrow.png" height="14px" width="14px"></div>
+                <div id="time-container" title="12 January 2025 Sunday">
+                    <div id="time-display">--:--</div>
+                    <div id="date-display">--/--/----</div>
+                </div>
+                <div id="notificationcentre" title="No new notifications"><img src="../photos/Notifications.png" height="20px" width="20px"></div>
+                <div class="homepagegap"><div class="invisibletext"><p>I</p></div></div>
+                <div class="homepageline"><div class="invisibletext"><p>I</p></div></div>
+                <a href="../index.html" id="homepagebuttonlink"><div class="homepagebutton"><div class="invisibletext"><p>I</p></div></div></a>
+            </div>
+
+        </div>
+    
+    </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script src="discord.js"></script>
+
+ </body>
+
+</html>

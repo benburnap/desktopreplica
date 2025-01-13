@@ -22,6 +22,7 @@
 <!-- Main Page-->
 <body>
     <div class=overall>
+
         <!-- Windows Expanded -->
         <div id="windowContainer">
             <div class="window-content">
@@ -34,7 +35,11 @@
         <!-- Hidden Icons Expanded -->
         <div id="hiddeniconsContainer">
             <div id="hiddenicons-content">
-                <h2>Hidden</h2>
+                <div class="hiddeniconsgrid">
+                    <div class="hiddeniconsshortcut" title="Discord"><img src="photos/discord.png" height="32px" width="32px"></div>
+                    <div class="hiddeniconsshortcut" title="Spotify"><img src="photos/Spotify.png" height="22px" width="22x"></div>
+                    <div class="hiddeniconsshortcut" title="Google Chrome"><img src="photos/Chrome.png" height="22px" width="22px"></div>
+                </div>
             </div>
         </div>
 
@@ -47,30 +52,36 @@
 
         <!-- Taskbar -->
         <div class="taskbar">
-            <div id="windowsbutton"><img src="photos/icon.png" height="22px" width="22px" id="windowsicon"></div>
-            <a href="example.html"><div class="shortcut"><img src="photos/Microsoft_Store.webp" height="24px" width="24px"></div></a>
-            <a href="discord/discord.html"><div class="shortcut"><img src="photos/discord.png" height="36px" width="36px"></div></a>
-            <a href="example.html"><div class="shortcut"><img src="photos/Spotify.png" height="24px" width="24px"></div></a>
-            <a href="example.html"><div class="shortcut"><img src="photos/opera.avif" height="24px" width="24px"></div></a>
-            <a href="fileexplorer/filexplorer.html"><div class="shortcut"><img src="photos/folders.png" height="26px" width="26px"></div></a>
-            <a href="example.html"><div class="shortcut"><img src="photos/Chrome.png" height="24px" width="24px"></div></a>
+
+            <!-- Taskbar Left -->
+            <div id="windowsbutton" data-title="Start"><img src="photos/icon.png" height="22px" width="22px" id="windowsicon"></div>
+            <a href="example.html"><div class="shortcut" data-title="Microsoft Store"><img src="photos/Microsoft_Store.webp" height="24px" width="24px"></div></a>
+            <a href="discord/discord.html"><div class="shortcut" data-title="Discord"><img src="photos/discord.png" height="36px" width="36px"></div></a>
+            <a href="example.html"><div class="shortcut" data-title="Spotify"><img src="photos/Spotify.png" height="24px" width="24px"></div></a>
+            <a href="calculator/calculator.html"><div class="shortcut" data-title="Calculator"><img src="photos/Calculator.png" height="24px" width="24px"></div></a>
+            <a href="fileexplorer/filexplorer.html"><div class="shortcut" data-title="File Explorer"><img src="photos/folders.png" height="26px" width="26px"></div></a>
+            <a href="example.html"><div class="shortcut" data-title="Chrome"><img src="photos/Chrome.png" height="24px" width="24px"></div></a>
+
+            <!-- Taskbar Right -->
             <div class="taskbarright">
-                <div class="weather">
+                <div class="weather" data-title="Weather">
                     <div class="weatherpadding"><img src="photos/Weather.png" height="20px" width="20px"></div>
                     <div class="weatherpadding1">25°C Mostly Sunny</div>
                 </div>
                 <div class="homepagegap"><div class="invisibletext"><p>I</p></div></div>
-                <div id="hiddenicons"><img src="photos/arrow.png" height="14px" width="14px"></div>
-                <div class="time-container">
+                <div id="hiddenicons" data-title="Show hidden icons"><img src="photos/arrow.png" height="14px" width="14px"></div>
+                <div id="time-container" data-title="12 January 2025 Sunday">
                     <div id="time-display">--:--</div>
                     <div id="date-display">--/--/----</div>
                 </div>
-                <div id="notificationcentre"><img src="photos/Notifications.png" height="20px" width="20px"></div>
+                <div id="notificationcentre" data-title="No new notifications"><img src="photos/Notifications.png" height="20px" width="20px"></div>
                 <div class="homepagegap"><div class="invisibletext"><p>I</p></div></div>
                 <div class="homepageline"><div class="invisibletext"><p>I</p></div></div>
                 <a href="index.html" id="homepagebuttonlink"><div class="homepagebutton"><div class="invisibletext"><p>I</p></div></div></a>
             </div>
+
         </div>
+
     </div>
 
     <!-- Scripts-->

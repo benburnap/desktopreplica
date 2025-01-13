@@ -1,5 +1,13 @@
 // Date and Time Function
 
+function getMonthName(monthNumber) {
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+    return monthNames[monthNumber];
+}
+
 function updateTime() {
     const date = new Date();
   
@@ -14,14 +22,17 @@ function updateTime() {
     // Format date to DD/MM/YYYY
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0');
+    const monthName = getMonthName(date.getMonth());
     const year = date.getFullYear();
   
     const formattedTime = `${hours}:${minutes}`;
     const formattedDate = `${day}/${month}/${year}`;
+    const formattedTitleDate = `${day} ${monthName} ${year}`;
   
     document.getElementById('time-display').innerHTML = formattedTime;
     document.getElementById('date-display').innerHTML = formattedDate;
-  }
+    //document.getElementbyId('time-container').setAttribute('data-title', formattedTitleDate);
+}
   
 setInterval(updateTime, 1000);
 updateTime();
@@ -29,7 +40,7 @@ updateTime();
 // Windows Button Function
 
 var windowsbutton = document.getElementById('windowsbutton');
-var windowsimage = document.getElementById('windowsbutton') && document.getElementById('windowsicon');
+var windowsimage = document.getElementById('windowsicon');
 var windowContainer = document.getElementById('windowContainer');
 var windowContent = document.querySelector('.window-content');
 
@@ -57,9 +68,12 @@ windowsbutton.addEventListener('click', () => {
     toggleWindowContainer();
 });
 
+windowsimage.addEventListener('click', () => {
+    toggleWindowContainer();
+});
+
 window.addEventListener('click', (event) => {
     var present = window.getComputedStyle(windowContainer).display;
-    console.log(present);
 
     if (present === 'flex' && !windowContent.contains(event.target) && event.target !== windowsbutton && event.target !== notificationCentreButton && event.target !== hiddeniconsbutton) {
       console.log ("The Window was Clicked")
@@ -93,7 +107,6 @@ hiddeniconsbutton.addEventListener('click', () => {
 
 window.addEventListener('click', (event) => {
   var present = window.getComputedStyle(hiddeniconsContainer).display;
-  console.log(present);
 
   if (present === 'flex' && !hiddeniconsContent.contains(event.target) && event.target !== hiddeniconsbutton) {
     console.log ("The Window was Clicked")
@@ -134,7 +147,6 @@ notificationCentreButton.addEventListener('click', () => {
 
 window.addEventListener('click', (event) => {
   var present = window.getComputedStyle(notificationCentreContainer).display;
-  console.log(present);
 
   if (present === 'flex' && !notificationCentreContent.contains(event.target) && event.target !== notificationCentreButton) {
     console.log ("The Window was Clicked")

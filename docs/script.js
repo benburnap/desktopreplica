@@ -39,10 +39,18 @@ updateTime();
 
 // Windows Button Function
 
+// Main Container
+
 var windowsbutton = document.getElementById('windowsbutton');
 var windowsimage = document.getElementById('windowsicon');
 var windowContainer = document.getElementById('windowContainer');
 var windowContent = document.querySelector('.window-content');
+
+// Content Animations
+
+var windowssidebar = document.getElementById("windowssidebar");
+var windowsscrollbar = document.getElementById("windowsscrollbar")
+var windowsright = document.getElementById("windowsrightside")
 
 function toggleWindowContainer() {
     console.log("The Windows Button Was Clicked");
@@ -56,11 +64,17 @@ function toggleWindowContainer() {
       windowContainer.style.display = 'flex';
       setTimeout(() => {
       windowContent.style.transform = 'translateY(0px)'
+      windowssidebar.style.transform = 'translateY(0px)'
+      windowsscrollbar.style.transform = 'translateY(0px)'
+      windowsright.style.transform = 'translateY(0px)'
       }, 1);
     }
     else {
       windowContainer.style.display = 'none';
       windowContent.style.transform = 'translateY(20px)';
+      windowssidebar.style.transform = 'translateY(10px)'
+      windowsscrollbar.style.transform = 'translateY(20px)'
+      windowsright.style.transform = 'translateY(20px)'
     }
 }
 
@@ -79,6 +93,9 @@ window.addEventListener('click', (event) => {
       console.log ("The Window was Clicked")
       windowContainer.style.display = 'none';
       windowContent.style.transform = 'translateY(20px)';
+      windowssidebar.style.transform = 'translateY(10px)'
+      windowsscrollbar.style.transform = 'translateY(20px)'
+      windowsright.style.transform = 'translateY(20px)'
     }
 });
 

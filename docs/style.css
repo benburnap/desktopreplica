@@ -319,36 +319,6 @@ h1 {
     background-color: var(--hover);
 }
 
-/* -- Notification Centre Expanded -- */
-
-#notificationcentreContainer {
-    position: fixed;
-    bottom: 40px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.0);
-    display: none;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-    z-index: 10;
-}
-
-#notificationcentre-content {
-    background-color: rgba(38, 38, 38, 0.999);
-    font-family: "Segoe UI";
-    color: #858585;
-    width: 400px;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(400px);
-    transition: 0.2s ease-in-out;
-}
-
 /* Data Title */
 
 [data-title]:after {
@@ -424,13 +394,25 @@ h1 {
 
 .windowsleftsidebar {
     width: 49px;
-    margin-top: 4px;
+    padding-top: 4px;
     height: 644px;
     z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    position: fixed;
+    transform: translateY(10px);
+    transition: 0.2s ease-out;
+}
+
+.windowsleftsidebar:hover {
+    width: 260px;
+    background-color: #2d2d2d;
+    align-items: flex-start;
+    .windowsleftsidebartext {
+        display: flex;
+    }
 }
 
 .windowsleftsidebaricon {
@@ -442,23 +424,63 @@ h1 {
     align-items: center;
 }
 
-.windowsleftsidebaricon:hover {
-    background-color: #545454;
-    border: 1px solid #636363;
-    width: 47px;
-    height: 47px;
-}
-
 .windowsleftsidebargap {
     width: 49px;
     height: 350px;
     opacity: 0;
 }
 
+.windowsleftsidebarrow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.2s ease-out;
+}
+
+.windowsleftsidebarrow:hover {
+    background-color: #545454;
+    border: 1px solid #636363;
+    height: 47px;
+    width: 258px;
+    .windowsleftsidebaricon {
+        width: 47px;
+        margin-right: 1px;
+    }
+    .windowsleftsidebartext {
+        width: 198px;
+        margin-left: 11px;
+    }
+}
+
+.windowsleftsidebartext {
+    width: 200px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 11px;
+    font-size: 16px;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#windowsleftsidebartextop {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Scroll Bar */
+
 .windowsleftscrollbar {
     width: 275px;
     height: 648px;
     overflow-y: hidden;
+    position: fixed;
+    margin-left: 49px;
+    transform: translateY(20px);
+    transition: 0.2s ease-out;
 }
 
 .windowsscrollbartop {
@@ -535,33 +557,67 @@ h1 {
 
 /* Scroll Bar */
 
-::-webkit-scrollbar {
+/* Still Needs Work! */
+
+.windowsleftscrollbar::-webkit-scrollbar {
     width: 12px;
-  }
+}
   
-  ::-webkit-scrollbar-track {
+.windowsleftscrollbar::-webkit-scrollbar-track {
+    background: #262626;
+}
+
+.windowsleftscrollbar::-webkit-scrollbar-track:hover {
     background: #3b3b3a;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #616261;
-    height: 20px;
-  }
+}
 
-  ::-webkit-scrollbar-thumb:hover {
+.windowsleftscrollbar::-webkit-scrollbar-thumb {
     background: #8b8b8b;
-  }
+    border-left: 9px solid #3b3b3a;
+}
 
-  ::-webkit-scrollbar-button {
+.windowsleftscrollbar::-webkit-scrollbar-thumb:hover {
+    background: #616261;
+    border-left: 9px solid #3b3b3a;
+}
+
+/* Top and Bottom */
+
+.windowsleftscrollbar::-webkit-scrollbar-button {
     background: #3b3b3a;
     color: white;
     height: 12px;
-  }
+}
 
-  ::-webkit-scrollbar-button:hover {
+.windowsleftscrollbar::-webkit-scrollbar-button:hover {
     background: #4e4e4d;
     color: white;
-  }
+}
+
+/* Draggable Button */
+  
+.windowsleftscrollbar::-webkit-scrollbar-thumb {
+    background: #8b8b8b;
+    border-left: 9px solid #3b3b3a;
+}
+
+.windowsleftscrollbar::-webkit-scrollbar-thumb:hover {
+    background: #8b8b8b;
+    border-left: 9px solid #3b3b3a;
+}
+
+/* Top and Bottom */
+
+.windowsleftscrollbar::-webkit-scrollbar-button {
+    background: #3b3b3a;
+    color: white;
+    height: 12px;
+}
+
+.windowsleftscrollbar::-webkit-scrollbar-button:hover {
+    background: #4e4e4d;
+    color: white;
+}
 
 /* Right  Side */
 
@@ -572,7 +628,11 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    transform: translateY(20px);
+    transition: 0.2s ease-out;
 }
+
+/* Subheading */
 
 .windowssubheading {
     width: 320px;
@@ -582,6 +642,12 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+}
+
+.windowssubheading:hover {
+    .windowssubheadingicon {
+        opacity: 1;
+    }
 }
 
 .windowssubheadingtext {
@@ -596,7 +662,10 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-right: 18px;
+    opacity: 0;
 }
+
+/* Shortcuts */
 
 .windowsrightrow {
     width: 320px;
@@ -618,6 +687,22 @@ h1 {
     justify-content: flex-start;
 }
 
+.windowsrightshortcut:hover {
+    width: 96px;
+    height: 96px;
+    border: 2px solid #777777;
+    .windowsrightshortcutimage {
+        margin-top: 18px;
+        width: 96px;
+    }
+    .windowsrightshortcuttext {
+        height: 14px;
+        margin-bottom: 2px;
+        width: 90px;
+        margin-left: 4px;
+    }
+}
+
 .windowsrightshortcutimage {
     margin-top: 20px;
     height: 60px;
@@ -628,12 +713,170 @@ h1 {
 }
 
 .windowsrightshortcuttext {
-    height: 16px;
+    height: 14px;
     width: 94px;
     display: flex;
     align-items: center;
     margin-left: 6px;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     text-align: left;
+    font-size: 12px;
+}
+
+/* -- Notification Centre Expanded -- */
+
+#notificationcentreContainer {
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 10;
+    user-select: none;
+}
+
+#notificationcentre-content {
+    background-color: rgba(38, 38, 38, 0.999);
+    font-family: "Segoe UI";
+    color: #858585;
+    width: 400px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: translateX(400px);
+    transition: 0.2s ease-in-out;
+}
+
+#notifmanagecontainer {
+    width: 400px;
+    min-height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+#notifmanagetext {
+    color: #046ec1;
+    text-align: center;
+    width: 140px;
+    height: 40px;
+    z-index: 2;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#notifmanagetext:hover {
+    color: #ffffff;
+}
+
+.notifmain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 100%;
+    font-family: "Segoe UI";
+    color: #a7a7a7;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.notifbottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 400px;
+    min-height: 300px;
+}
+
+.notifbottomheading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    height: 16px;
+}
+
+.notifbottomheadingtext {
+    color: #046ec1;
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.notifbottomheadingtext:hover {
+    color: #ffffff;
+}
+
+.notifbottomgrid {
+    margin: 16px;
+    display: grid;
+    width: 368px;
+    height: 210px;
+    grid-template-columns: 92px 92px 92px 92px;
+    grid-template-rows: 70px 70px 70px;
+}
+
+.notifbottombutton {
+    background-color: #4d4f50;
+    margin: 2px;
+    width: 88px;
+    height: 66px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#bluebutton {
+    background-color: #00467f;
+}
+
+.notifbottombutton:hover {
+    border: 1px solid #777777;
+    width: 86px;
+    height: 64px;
+    .notifbottombuttonicon {
+        margin: 3px;
+    }
+    .notifbottombuttontext {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        margin-left: 3px;
+    }
+}
+
+.notifbottombuttonicon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80px;
+    height: 36px;
+    margin: 4px;
+}
+
+.notifbottombuttontext {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 80px;
+    height: 14px;
+    margin: 4px;
+    color: #ffffff;
     font-size: 12px;
 }

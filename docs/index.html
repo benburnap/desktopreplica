@@ -29,18 +29,36 @@
                 <!-- Left Side -->
                 <div class="windowsleft">
                     <!-- Sidebar -->
-                    <div class="windowsleftsidebar">
+                    <div class="windowsleftsidebar" id="windowssidebar">
+                        <div class="windowsleftsidebarrow">
                         <div class="windowsleftsidebaricon"><img src="photos/menuburger.png" height="16px" width="16px"></div>
+                        <div class="windowsleftsidebartext" id="windowsleftsidebartextop">Start</div>
+                        </div>
                         <div class="windowsleftsidebargap">O</div>
-                        <div class="windowsleftsidebaricon">1</div>
-                        <div class="windowsleftsidebaricon">2</div>
-                        <div class="windowsleftsidebaricon">3</div>
-                        <div class="windowsleftsidebaricon">4</div>
-                        <div class="windowsleftsidebaricon">5</div>
+                        <div class="windowsleftsidebarrow">
+                        <div class="windowsleftsidebaricon"><img src="photos/profilepicture.png" height="26px" width="26px"></div>
+                        <div class="windowsleftsidebartext">Username</div>
+                        </div>
+                        <div class="windowsleftsidebarrow">
+                        <div class="windowsleftsidebaricon"><img src="photos/documents.png" height="18px" width="18px"></div>
+                        <div class="windowsleftsidebartext">Documents</div>
+                        </div>
+                        <div class="windowsleftsidebarrow">
+                        <div class="windowsleftsidebaricon"><img src="photos/landscape2.png" height="18px" width="18px"></div>
+                        <div class="windowsleftsidebartext">Pictures</div>
+                        </div>
+                        <div class="windowsleftsidebarrow">
+                        <div class="windowsleftsidebaricon"><img src="photos/settings.png" height="18px" width="18px"></div>
+                        <div class="windowsleftsidebartext">Settings</div>
+                        </div>
+                        <div class="windowsleftsidebarrow">
+                        <div class="windowsleftsidebaricon"><img src="photos/power.png" height="32px" width="32px"></div>
+                        <div class="windowsleftsidebartext">Power</div>
+                        </div>
                     </div>
 
                     <!-- Scrollbar-->
-                    <div class="windowsleftscrollbar">
+                    <div class="windowsleftscrollbar" id="windowsscrollbar">
                         <!-- Recently Added -->
                         <div class="windowsscrollbartop">
                             <div class="windowsscrollbartoptext">Recently added</div>
@@ -163,7 +181,7 @@
                 </div>
 
                 <!-- Right Side -->
-                <div class="windowsright">
+                <div class="windowsright" id="windowsrightside">
                     <!-- Section 1 -->
                     <div class="windowssubheading">
                         <div class="windowssubheadingtext">Title</div>
@@ -261,7 +279,65 @@
         <!-- Notification Centre Expanded -->
         <div id="notificationcentreContainer">
             <div id="notificationcentre-content">
-                <p>No New Notifications</p>
+                <div id="notifmanagecontainer">
+                    <div id="notifmanagetext">Manage notifications</div>
+                </div>
+                <div class="notifmain">No new notifications</div>
+                <div class="notifbottom">
+                    <div class="notifbottomheading">
+                        <div class="notifbottomheadingtext">Collapse</div>
+                    </div>
+                    <div class="notifbottomgrid">
+                        <div class="notifbottombutton" id="bluebutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton" id="bluebutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton" id="bluebutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

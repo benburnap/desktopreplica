@@ -17,13 +17,330 @@
     <!-- Directory -->
     <link href="../style.css" rel="stylesheet" type="text/css">
     <link href="fileexplorer.css" rel="stylesheet" type="text/css">
-    <script src="../script.js"></script>
 
 </head>
 
 <body>
     <!-- Overall -->
     <div class="overall">
+
+        <!-- Windows Expanded -->
+        <div id="windowContainer">
+            <div class="window-content">
+                <!-- Left Side -->
+                <div class="windowsleft">
+                    <!-- Sidebar -->
+                    <div class="windowsleftsidebar" id="windowssidebar">
+                        <div class="windowsleftsidebarrow">
+                        <div class="windowsleftsidebaricon"><img src="../photos/menuburger.png" height="16px" width="16px"></div>
+                        <div class="windowsleftsidebartext" id="windowsleftsidebartextop">Start</div>
+                        </div>
+                        <div class="windowsleftsidebargap">O</div>
+                        <div class="windowsleftsidebarrow">
+                        <div class="windowsleftsidebaricon"><img src="../photos/profilepicture.png" height="26px" width="26px"></div>
+                        <div class="windowsleftsidebartext">Username</div>
+                        </div>
+                        <div class="windowsleftsidebarrow">
+                        <div class="windowsleftsidebaricon"><img src="../photos/documents.png" height="18px" width="18px"></div>
+                        <div class="windowsleftsidebartext">Documents</div>
+                        </div>
+                        <div class="windowsleftsidebarrow">
+                        <div class="windowsleftsidebaricon"><img src="../photos/landscape2.png" height="18px" width="18px"></div>
+                        <div class="windowsleftsidebartext">Pictures</div>
+                        </div>
+                        <div class="windowsleftsidebarrow">
+                        <div class="windowsleftsidebaricon"><img src="../photos/settings.png" height="18px" width="18px"></div>
+                        <div class="windowsleftsidebartext">Settings</div>
+                        </div>
+                        <div class="windowsleftsidebarrow">
+                        <div class="windowsleftsidebaricon"><img src="../photos/power.png" height="32px" width="32px"></div>
+                        <div class="windowsleftsidebartext">Power</div>
+                        </div>
+                    </div>
+
+                    <!-- Scrollbar-->
+                    <div class="windowsleftscrollbar" id="windowsscrollbar">
+                        <!-- Recently Added -->
+                        <div class="windowsscrollbartop">
+                            <div class="windowsscrollbartoptext">Recently added</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/figma.svg" height="22px" width="22px"></div>
+                            <div class="windowsscrollbartext">Figma</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/GitHub Desktop.webp" height="24px" width="24px"></div>
+                            <div class="windowsscrollbartext">GitHub Desktop</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+
+                        <!-- Suggested -->
+                        <div class="windowsscrollbartop">
+                            <div class="windowsscrollbartoptext">Suggested</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="22px" width="22px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+
+                        <!-- # -->
+                        <div class="windowsscrollbartop">
+                            <div class="windowsscrollbartoptext">#</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+
+                        <!-- A -->
+                        <div class="windowsscrollbartop">
+                            <div class="windowsscrollbartoptext">A</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+
+                        <!-- B -->
+                        <div class="windowsscrollbartop">
+                            <div class="windowsscrollbartoptext">B</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+
+                        <!-- C -->
+                        <div class="windowsscrollbartop">
+                            <div class="windowsscrollbartoptext">C</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+
+                        <!-- D -->
+                        <div class="windowsscrollbartop">
+                            <div class="windowsscrollbartoptext">D</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                        <div class="windowsscrollbardiv">
+                            <div class="windowsscrollbaricon"><img src="../photos/icon.png" height="20px" width="20px"></div>
+                            <div class="windowsscrollbartext">Example</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side -->
+                <div class="windowsright" id="windowsrightside">
+                    <!-- Section 1 -->
+                    <div class="windowssubheading">
+                        <div class="windowssubheadingtext">Title</div>
+                        <div class="windowssubheadingicon"><img src="../photos/menuburger.png" height="20px" width="20px"></div>
+                    </div>
+                    <div class="windowsrightrow">
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="windowssubheading">
+                        <div class="windowssubheadingtext">Title</div>
+                        <div class="windowssubheadingicon"><img src="../photos/menuburger.png" height="20px" width="20px"></div>
+                    </div>
+                    <div class="windowsrightrow">
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="windowssubheading">
+                        <div class="windowssubheadingtext">Title</div>
+                        <div class="windowssubheadingicon"><img src="../photos/menuburger.png" height="20px" width="20px"></div>
+                    </div>
+                    <div class="windowsrightrow">
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div class="windowssubheading">
+                        <div class="windowssubheadingtext">Title</div>
+                        <div class="windowssubheadingicon"><img src="../photos/menuburger.png" height="20px" width="20px"></div>
+                    </div>
+                    <div class="windowsrightrow">
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                        <div class="windowsrightshortcut">
+                            <div class="windowsrightshortcutimage"><img src="../photos/icon.png" height="36px" width="36px"></div>
+                            <div class="windowsrightshortcuttext">Example</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden Icons Expanded -->
+        <div id="hiddeniconsContainer">
+            <div id="hiddenicons-content">
+                <div class="hiddeniconsgrid">
+                    <div class="hiddeniconsshortcut" title="Discord"><img src="../photos/discord.png" height="32px" width="32px"></div>
+                    <div class="hiddeniconsshortcut" title="Spotify"><img src="../photos/Spotify.png" height="22px" width="22x"></div>
+                    <div class="hiddeniconsshortcut" title="Google Chrome"><img src="../photos/Chrome.png" height="22px" width="22px"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification Centre Expanded -->
+        <div id="notificationcentreContainer">
+            <div id="notificationcentre-content">
+                <div id="notifmanagecontainer">
+                    <div id="notifmanagetext">Manage notifications</div>
+                </div>
+                <div class="notifmain">No new notifications</div>
+                <div class="notifbottom">
+                    <div class="notifbottomheading">
+                        <div class="notifbottomheadingtext">Collapse</div>
+                    </div>
+                    <div class="notifbottomgrid">
+                        <div class="notifbottombutton" id="bluebutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton" id="bluebutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton" id="bluebutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                        <div class="notifbottombutton">
+                            <div class="notifbottombuttonicon"><img src="../photos/icon.png" height="24px" width="24px"></div>
+                            <div class="notifbottombuttontext">Example</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <!-- Main File Explorer -->
         <div class="fileoverall">
@@ -46,32 +363,41 @@
     
         <!-- Taskbar -->
         <div class="taskbar">
-            <div id="windowsbutton"><img src="../photos/icon.png" height="22px" width="22px"></div>
-            <a href="../example.html"><div class="shortcut"><img src="../photos/Microsoft_Store.webp" height="24px" width="24px"></div></a>
-            <a href="../discord/discord.html"><div class="shortcut"><img src="../photos/discord.png" height="36px" width="36px"></div></a>
-            <a href="../example.html"><div class="shortcut"><img src="../photos/Spotify.png" height="24px" width="24px"></div></a>
-            <a href="../example.html"><div class="shortcut"><img src="../photos/opera.avif" height="24px" width="24px"></div></a>
-            <a href="filexplorer.html"><div class="shortcut"><img src="../photos/folders.png" height="26px" width="26px"></div></a>
-            <a href="../example.html"><div class="shortcut"><img src="../photos/Chrome.png" height="24px" width="24px"></div></a>
+
+            <!-- Taskbar Left -->
+            <div id="windowsbutton" data-title="Start"><img src="../photos/icon.png" height="22px" width="22px" id="windowsicon"></div>
+            <a href="../example.html"><div class="shortcut" data-title="Microsoft Store"><img src="../photos/Microsoft_Store.webp" height="24px" width="24px"></div></a>
+            <a href="../discord/discord.html"><div class="shortcut" data-title="Discord"><img src="../photos/discord.png" height="36px" width="36px"></div></a>
+            <a href="../spotify/spotify.html"><div class="shortcut" data-title="Spotify"><img src="../photos/Spotify.png" height="24px" width="24px"></div></a>
+            <a href="../calculator/calculator.html"><div class="shortcut" data-title="Calculator"><img src="../photos/Calculator.png" height="24px" width="24px"></div></a>
+            <a href="filexplorer.html"><div class="shortcut" data-title="File Explorer"><img src="../photos/folders.png" height="26px" width="26px"></div></a>
+            <a href="../example.html"><div class="shortcut" data-title="Chrome"><img src="../photos/Chrome.png" height="24px" width="24px"></div></a>
+
+            <!-- Taskbar Right -->
             <div class="taskbarright">
-                <div class="weather">
+                <div class="weather" data-title="Weather">
                     <div class="weatherpadding"><img src="../photos/Weather.png" height="20px" width="20px"></div>
                     <div class="weatherpadding1">25°C Mostly Sunny</div>
                 </div>
                 <div class="homepagegap"><div class="invisibletext"><p>I</p></div></div>
-                <a href="../example.html"><div class="hiddenicons"><img src="../photos/arrow.png" height="14px" width="14px"></div></a>
-                <div class="time-container">
+                <div id="hiddenicons" data-title="Show hidden icons"><img src="../photos/arrow.png" height="14px" width="14px"></div>
+                <div id="time-container" data-title="12 January 2025 Sunday">
                     <div id="time-display">--:--</div>
                     <div id="date-display">--/--/----</div>
                 </div>
-                <a href="../example.html"><div class="notificationcentre"><img src="../photos/Notifications.png" height="20px" width="20px"></div></a>
+                <div id="notificationcentre" data-title="No new notifications"><img src="../photos/Notifications.png" height="20px" width="20px"></div>
                 <div class="homepagegap"><div class="invisibletext"><p>I</p></div></div>
                 <div class="homepageline"><div class="invisibletext"><p>I</p></div></div>
                 <a href="../index.html" id="homepagebuttonlink"><div class="homepagebutton"><div class="invisibletext"><p>I</p></div></div></a>
             </div>
+
         </div>
 
     </div>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+
 </body>
 
 </html>

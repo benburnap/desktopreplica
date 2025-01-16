@@ -42,7 +42,6 @@ updateTime();
 // Main Container
 
 var windowsbutton = document.getElementById('windowsbutton');
-var windowsimage = document.getElementById('windowsicon');
 var windowContainer = document.getElementById('windowContainer');
 var windowContent = document.querySelector('.window-content');
 
@@ -78,12 +77,9 @@ function toggleWindowContainer() {
     }
 }
 
-windowsbutton.addEventListener('click', () => {
+windowsbutton.addEventListener('click', (event) => {
     toggleWindowContainer();
-});
-
-windowsimage.addEventListener('click', () => {
-    toggleWindowContainer();
+    event.stopPropagation();
 });
 
 window.addEventListener('click', (event) => {
@@ -118,8 +114,9 @@ function toggleHiddenIcons() {
     }
 }
 
-hiddeniconsbutton.addEventListener('click', () => {
+hiddeniconsbutton.addEventListener('click', (event) => {
     toggleHiddenIcons();
+    event.stopPropagation();
 });
 
 window.addEventListener('click', (event) => {
@@ -158,8 +155,9 @@ function toggleNotificationCentre() {
     }
 }
 
-notificationCentreButton.addEventListener('click', () => {
+notificationCentreButton.addEventListener('click', (event) => {
     toggleNotificationCentre();
+    event.stopPropagation();
 });
 
 window.addEventListener('click', (event) => {

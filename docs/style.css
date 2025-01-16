@@ -504,6 +504,10 @@ h1 {
         margin-bottom: 7px;
         margin-left: 2px;
     }
+    .windowsscrollbarsubheading {
+        margin-bottom: 7px;
+        margin-left: 11px;
+    }
 }
 
 .windowsscrollbardiv {
@@ -553,6 +557,14 @@ h1 {
     font-size: 12px;
     font-family: 'Segoe UI', sans-serif;
     margin-left: 3px;
+}
+
+.windowsscrollbarsubheading {
+    color: white;
+    font-size: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 8px;
+    margin-left: 12px;
 }
 
 /* Scroll Bar */

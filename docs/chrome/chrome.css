@@ -93,6 +93,7 @@
     font-family: "Roboto", sans-serif;
     font-size: 12px;
     margin-left: 10px;
+    margin-bottom: 2px;
 }
 
 .chrometabicon {
@@ -110,6 +111,124 @@
     height: 40px;
     background-color: #1f2020;
     border-bottom-left-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.chrometabcontainerright {
+    width: 246px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabbarrighttab {
+    width: 234px;
+    height: 27px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.tabbarrighttab:hover {
+    background-color: #004a77;
+}
+
+.chrometabrighttext {
+    color: #e3e3e3;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+.chrometabrighticon {
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.tabbarrightdivider {
+    width: 2px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(0, 0, 0, 0);
+}
+
+.chrometabright {
+    height: 27px;
+    width: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.chrometableft {
+    height: 27px;
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.closetab {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closetab:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.closetab1 {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.closetab1:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.newtabcontainer {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newtab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.newtab:hover {
+    background-color: #004a77;
 }
 
 /* Top Search Bar */
@@ -124,6 +243,40 @@
     background-color: #3c3c3c;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.browsersearchbarbuttoncontainer {
+    width: 36px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.browsersearchbarbutton {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+}
+
+.browsersearchbarbutton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.browsersearchbarbuttons {
+    margin-left: 5px;
+    width: 108px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    user-select: none;
 }
 
 /* Divider */
